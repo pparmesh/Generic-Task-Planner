@@ -1,4 +1,4 @@
-// Class definition for Symbolic Planner
+// Class definition file for Symbolic Planner
 // Author : Prateek Parmeshwar
 // Copyright 2019, Prateek Parmeshwar, All rights reserved
 
