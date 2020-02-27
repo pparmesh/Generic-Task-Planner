@@ -1,4 +1,3 @@
-
 // Action Class for Task Planner
 // Author : Prateek Parmeshwar
 #pragma once
