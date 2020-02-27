@@ -1,4 +1,4 @@
-// Class declaration for Symbolic Planner
+// Class declaration file for Symbolic Planner
 // Author : Prateek Parmeshwar
 // Copyright 2019, Prateek Parmeshwar, All rights reserved
 
