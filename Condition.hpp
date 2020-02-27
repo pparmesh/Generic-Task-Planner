@@ -1,4 +1,3 @@
-
 // Condition Class for Task Planner
 // Author : Prateek Parmeshwar
 
