@@ -56,5 +56,5 @@ that is expanded, the planner has to perform a separate search to return the num
 To Compile : 
 
 g++ -std=c++11  SymbolicPlanner.cpp main.cpp -o planner
-.\planner.exe filename.txt heuristic_val
+.\planner.exe filename.txt heuristic_val 
 
