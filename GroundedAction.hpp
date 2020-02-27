@@ -1,4 +1,4 @@
-// GroundedAction Class for Task Planner
+// GroundedAction Class file for Task Planner
 // Author : Prateek Parmeshwar
 
 #pragma once
