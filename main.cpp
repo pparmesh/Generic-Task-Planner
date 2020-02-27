@@ -1,4 +1,4 @@
-// Call to main for Symbolic Planner
+// Call to main function for Symbolic Planner
 // Author : Prateek Parmeshwar
 
 #include <iostream>
