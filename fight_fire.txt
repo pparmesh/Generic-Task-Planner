@@ -1,0 +1,28 @@
+Symbols: A,B,C,D,E,M,Q,F,W,W1,W2,W3,Battery,Tank
+Initial conditions: At(M,A), Flying(Q,B), Low(Battery), Empty(Tank), At(W1,W), At(W2,W), At(W3,W), Robot(M), Quad(Q), Location(A), Location(B), Location(C), Location(D), Location(E), Location(W), Location(F), Water(W1), Water(W2), Water(W3), Battery(Battery), Tank(Tank)   
+Goal conditions: At(W1,F), At(W2,F), At(W3,F) 
+
+Actions:
+        MoveUGV(x,y)
+        Preconditions: At(M,x), Location(x), Location(y)
+        Effects: At(M,y), !At(M,x)
+
+        Fly(Q,x)
+        Preconditions: On(Q,M), At(M,x), Location(x), High(Battery)
+        Effects: !On(Q,M), Flying(Q,x), !High(Battery), Low(Battery)
+
+        LandQuad(x)
+        Preconditions: Flying(Q,x), At(M,x), Location(x)
+        Effects:  On(Q,M), !Flying(Q,x)
+
+        Charge(Battery)
+        Preconditions: Low(Battery), On(Q,M)
+        Effects: High(Battery), !Low(Battery)
+
+        Extinguish(x)
+        Preconditions: Flying(Q,F), Location(F), Water(x), TankFull(Tank,x), At(M,F)
+        Effects: Empty(Tank), !TankFull(Tank,x), At(x,F)
+
+        GetWater(Tank,x)
+        Preconditions: At(M,W), On(Q,M), Empty(Tank), Water(x), At(x,W)
+        Effects: !Empty(Tank), TankFull(Tank,x), !At(x,W)

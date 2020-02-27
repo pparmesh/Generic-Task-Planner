@@ -1,0 +1,20 @@
+Symbols: A, B, C, D, Table1, Table2
+Initial conditions: On(B,A), On(A,Table1), On(C,Table1), On(D,Table2) Block(A), Block(B), Block(C), Block(D), Table(Table1), Table(Table2), Clear(B), Clear(C), Clear(D)
+Goal conditions: On(A,Table2), On(B,A), On(C,B), On(D,C), Clear(D)
+
+Actions:
+        MoveFromTableToTable(x,y,z)
+        Preconditions: Block(x), Table(y), Table(z), Clear(x), On(x,y)
+        Effects: On(x,z), !On(x,y)
+
+        MoveFromTableToBlock(x,y,z)
+        Preconditions: Block(x), Table(y), Block(z), Clear(x), On(x,y), Clear(z)
+        Effects: On(x,z), !On(x,y), !Clear(z)
+
+        MoveFromBlockToTable(x,y,z)
+        Preconditions: Block(x), Block(y), Table(z), Clear(x), On(x,y)
+        Effects: On(x,z), Clear(y), !On(x,y)
+
+        MoveFromBlockToBlock(x,y,z)
+        Preconditions: Block(x), Block(y), Block(z), Clear(z), Clear(x), On(x,y)
+        Effects: On(x,z), Clear(y), !Clear(z), !On(x,y)
