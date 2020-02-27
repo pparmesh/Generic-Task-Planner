@@ -1,4 +1,4 @@
-// GroundedCondition Class for Task Planner
+// GroundedCondition Class file for Task Planner
 // Author : Prateek Parmeshwar
 
 #pragma once
