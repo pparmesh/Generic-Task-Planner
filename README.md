@@ -1,6 +1,9 @@
 # Generic-Task-Planner
 This repository contains an implementation of a Task Planner that follows the STRIPS representation
 
+*Academic Integrity*
+If you are currently enrolled in the Graduate 16-782 Planning and Decision Making in Robotics, or the Undergraduate 16-350 Planning Techniques for Robotics course at Carnegie Mellon University, please refer to CMUs Academic Integrity Policy before referring to any of the contents of this repository.
+
 The task at hand is to develop a general planner that outputs a sequence of actions that make my agent reach the
 goal conditions from the start conditions. Actions are predefined and at every state that my agent is in, it has to
 check which actions can it take in order to reach the next state. This is essentially a graph search problem now,
@@ -41,3 +44,8 @@ adding only positive grounded conditions. This heuristic is admissible as it is 
 actions it will take for the agent to reach the goal as my agent will definitely need to perform more actions than what the heuristic says as only a portion of the effects of the action at hand is being applied. The number of states
 expanded in this case reduces dramatically but the planning time increases. This is expected as for every new state
 that is expanded, the planner has to perform a separate search to return the number of actions to go.
+
+To Compile : 
+g++ -std=c++11  SymbolicPlanner.cpp main.cpp -o planner
+.\planner.exe filename.txt heuristic_val
+
